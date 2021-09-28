@@ -79,12 +79,12 @@ void fs::ArrayList<T>::clear() {
 }
 
 template<typename T>
-int fs::ArrayList<T>::length() {
+int fs::ArrayList<T>::length() const {
     return m_currSize;
 }
 
 template<typename T>
-bool fs::ArrayList<T>::isEmpty() {
+bool fs::ArrayList<T>::isEmpty() const {
     return m_currSize == 0;
 }
 

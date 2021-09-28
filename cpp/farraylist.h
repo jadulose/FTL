@@ -32,11 +32,13 @@ namespace fs {
         void clear() override;
 
         void set(int index, const T &elem) override;
-        const T &get(int index) const override;
+        [[nodiscard]] const T &get(int index) const override;
 
-        int length() override;
-        bool isEmpty() override;
+        [[nodiscard]] int length() const override;
+        [[nodiscard]] bool isEmpty() const override;
     };
 }
+
+template class fs::ArrayList<int>;
 
 #endif //FTL_FARRAYLIST_H
